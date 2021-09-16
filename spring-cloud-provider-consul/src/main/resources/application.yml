@@ -1,0 +1,12 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: provider-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    discovery:
+      healthCheckPath: ${management.server.servlet.context-path}/actuator/health
+      healthCheckInterval: 15s
